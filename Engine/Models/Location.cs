@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Engine.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Models
 {
-    public class Location : INotifyPropertyChanged
+    public class Location : BaseNotificationClass
     {
         private string _name;
         private int _xCoordinate;
@@ -21,7 +22,7 @@ namespace Engine.Models
             set
             {
                 _name = value;
-                OnPropertyChanged("Name");
+                OnPropertyChanged(nameof(Name));
             }
         }
 
@@ -31,7 +32,7 @@ namespace Engine.Models
             set
             {
                 _description = value;
-                OnPropertyChanged("Description");
+                OnPropertyChanged(nameof(Description));
             }
         }
 
@@ -41,7 +42,7 @@ namespace Engine.Models
             set
             {
                 _imageName = value;
-                OnPropertyChanged("ImageName");
+                OnPropertyChanged(nameof(ImageName));
             }
         }
 
@@ -51,7 +52,7 @@ namespace Engine.Models
             set
             {
                 _xCoordinate = value;
-                OnPropertyChanged("XCoordinate");
+                OnPropertyChanged(nameof(XCoordinate));
             }
         }
 
@@ -61,15 +62,8 @@ namespace Engine.Models
             set
             {
                 _yCoordinate = value;
-                OnPropertyChanged("YCoordinate");
+                OnPropertyChanged(nameof(YCoordinate));
             }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
