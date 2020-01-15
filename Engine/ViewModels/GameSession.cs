@@ -15,6 +15,9 @@ namespace Engine.ViewModels
             CurrentPlayer.Name = "Melvin";
             CurrentPlayer.CharacterClass = "Mage";
             CurrentPlayer.Gold = 1000000;
+            CurrentPlayer.ExperiencePoints = 100;
+            CurrentPlayer.HitPoints = 200;
+            CurrentPlayer.Level = 1;
         }
     }
 }
