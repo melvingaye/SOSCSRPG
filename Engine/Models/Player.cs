@@ -18,8 +18,9 @@ namespace Engine.Models
         {
             get { return _name; }
             set
-            { _name = value;
-              OnPropertyChanged("Name");
+            {
+                _name = value;
+                OnPropertyChanged("Name");
             }
         }
 
