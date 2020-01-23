@@ -49,6 +49,8 @@ namespace Engine.Factories
             newWorld.AddLocation(0, 2, "Herbalist's garden",
                 "There are many plants here, with snakes hiding behind them.",
                 "/Engine;component/Images/Locations/HerbalistsGarden.png");
+
+            newWorld.LocationAt(0, 1).QuestsAvailableHere.Add(QuestFactory.GetQuestByID(1));
             return newWorld;
         }
     }

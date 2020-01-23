@@ -58,10 +58,11 @@ namespace Engine.ViewModels
         public GameSession()
         {
             CurrentPlayer = new Player { Name = "Melvin", CharacterClass = "Knight", ExperiencePoints = 0, Gold = 0, HitPoints = 100, Level = 0 };
-
+            
             CurrentWorld = WorldFactory.CreateWorld();
 
             CurrentLocation = CurrentWorld.LocationAt(0, 0);
+
         }
 
         public void MoveNorth()

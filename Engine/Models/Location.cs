@@ -15,6 +15,7 @@ namespace Engine.Models
         private int _yCoordinate;
         private string _description;
         private string _imageName;
+        public List<Quest> QuestsAvailableHere { get; set; } = new List<Quest>();
 
         public string Name
         {
