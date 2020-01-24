@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFUI"
         mc:Ignorable="d"
-        FontSize="12pt"
+        FontSize="11pt"
         Title="C# RPG" Height="760" Width="1024">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
@@ -87,7 +87,12 @@
                     </DataGrid>
                 </TabItem>
                 <TabItem Header="Quests">
-                    
+                    <DataGrid ItemsSource="{Binding CurrentPlayer.Quests}" AutoGenerateColumns="False" HeadersVisibility="Column">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding PlayerQuest.Name}" Width="*"/>
+                            <DataGridTextColumn Header="Done?" Binding="{Binding IsCompleted}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </TabItem>
             </TabControl>
         </Grid>
