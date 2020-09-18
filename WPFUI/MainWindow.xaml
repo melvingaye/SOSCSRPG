@@ -12,6 +12,7 @@
     </Window.Resources>
     <!--Container Grid-->
     <Grid>
+        <!--Defined a 2x3 Grid-->
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
